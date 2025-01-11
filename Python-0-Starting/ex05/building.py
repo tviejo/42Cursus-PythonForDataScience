@@ -2,7 +2,15 @@ import sys
 
 
 def displays_sums_characters(string):
-    # function that takes a string and displays the sum of its characters
+    """
+    Calculate and display the total number of characters in a string.
+
+    Parameters:
+    string (str): The input string to analyze.
+
+    Returns:
+    None
+    """
     sum = 0
     for char in string:
         sum += 1
@@ -10,7 +18,15 @@ def displays_sums_characters(string):
 
 
 def displays_sums_lowercase(string):
-    # function that takes a string and displays the sum of its lower-case
+    """
+    Calculate and display the total number of lowercase letters in a string.
+
+    Parameters:
+    string (str): The input string to analyze.
+
+    Returns:
+    None
+    """
     sum = 0
     for char in string:
         if char.islower():
@@ -19,7 +35,15 @@ def displays_sums_lowercase(string):
 
 
 def displays_sums_uppercase(string):
-    # function that takes a string and displays the sum of its upper-case
+    """
+    Calculate and display the total number of uppercase letters in a string.
+
+    Parameters:
+    string (str): The input string to analyze.
+
+    Returns:
+    None
+    """
     sum = 0
     for char in string:
         if char.isupper():
@@ -28,7 +52,15 @@ def displays_sums_uppercase(string):
 
 
 def displays_sums_punctuation(string):
-    # function that takes a string and displays the sum of its punctuation
+    """
+    Calculate and display the total number of punctuation marks in a string.
+
+    Parameters:
+    string (str): The input string to analyze.
+
+    Returns:
+    None
+    """
     sum = 0
     for char in string:
         if char in "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~":
@@ -37,7 +69,15 @@ def displays_sums_punctuation(string):
 
 
 def displays_sums_spaces(string):
-    # function that takes a string and displays the sum of its spaces
+    """
+    Calculate and display the total number of spaces in a string.
+
+    Parameters:
+    string (str): The input string to analyze.
+
+    Returns:
+    None
+    """
     sum = 0
     for char in string:
         if char.isspace():
@@ -46,7 +86,15 @@ def displays_sums_spaces(string):
 
 
 def displays_sums_digits(string):
-    # function that takes a string and displays the sum of its digits
+    """
+    Calculate and display the total number of digits in a string.
+
+    Parameters:
+    string (str): The input string to analyze.
+
+    Returns:
+    None
+    """
     sum = 0
     for char in string:
         if char.isdigit():
@@ -55,35 +103,30 @@ def displays_sums_digits(string):
 
 
 def main():
-    # main fuction that take a single string and
-    # displays the sums of its upper-case characters, lower-case
-    # characters, punctuation characters, digits and spaces.
+    """
+    Main function to process a string and display various character counts.
 
-    # check if they are more than one argument
+    The function analyzes a string for the total count of characters, uppercase
+    letters, lowercase letters, punctuation marks, spaces, and digits.
+
+    Returns:
+    None
+    """
     if len(sys.argv) > 2:
         print("AssertionError: more than one argument is provided")
         return
 
-    # check if the string is provided
     if len(sys.argv) == 1:
-        # read the string from the user
         print("What is the text to count?")
         string = sys.stdin.read()
     else:
-        # get the string from the command line
         string = sys.argv[1]
 
-    # display the sum of characters
     displays_sums_characters(string)
-    # display the sum of upper-case characters
     displays_sums_uppercase(string)
-    # display the sum of lower-case characters
     displays_sums_lowercase(string)
-    # display the sum of punctuation characters
     displays_sums_punctuation(string)
-    # display the sum of spaces
     displays_sums_spaces(string)
-    # display the sum of digits
     displays_sums_digits(string)
 
 
