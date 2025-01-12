@@ -14,6 +14,14 @@ def ft_rotate(imageList: list) -> list:
         return None
 
     image_array = np.array(imageList)
-    rotated_image = np.rot90(image_array)
-    print("New shape after Transpose:", rotated_image.shape)
-    return rotated_image.tolist()
+    rows = len(imageList)
+    cols = len(imageList[0])
+    transposed = [[0] * rows for _ in range(cols)]
+
+    for i in range(rows):
+        for j in range(cols):
+            transposed[j][i] = image_array[i][j]
+
+    transposed = np.array(transposed)
+    print("New shape after Transpose:", transposed.shape)
+    return transposed.tolist()
