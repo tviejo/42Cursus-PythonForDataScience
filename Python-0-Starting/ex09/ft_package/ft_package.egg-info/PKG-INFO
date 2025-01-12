@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ft-package
+Version: 0.0.1
+Summary: A sample test package
+Home-page: UNKNOWN
+Author: tviejo
+Author-email: tviejo@student.42.fr
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ft_package
+
+A sample test package.
+
+## Installation
+
+```bash
+pip install ./dist/ft_package-0.0.1.tar.gz
+
