@@ -11,5 +11,5 @@ def all_thing_is_obj(object: any) -> int:
         print(object, "is in the kitchen :", object.__class__)
     else:
         print("Type not found")
-        return(42)
+    return(42)
     
