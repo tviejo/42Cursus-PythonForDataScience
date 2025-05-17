@@ -8,9 +8,11 @@ class Baratheon(Character):
         self.eyes = "brown"
         self.hairs = "dark"
     def __str__(self):
+        """Baratheon str"""
         return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
 
     def __repr__(self):
+        """Baratheon repr"""
         return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
 
 class Lannister(Character):
@@ -21,9 +23,11 @@ class Lannister(Character):
         self.eyes = "blue"
         self.hairs = "light"
     def __str__(self):
+        """Lannister str"""
         return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
 
     def __repr__(self):
+        """Lannister repr"""
         return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
     
     @classmethod
